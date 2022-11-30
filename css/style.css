@@ -29,7 +29,7 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
     padding: 2rem 0;
   }
   .nav, h1, h2, h3, h4, h5, h6, .btn {
-    font-family: 'Silkscreen';
+    font-family: 'Nerko One';
     letter-spacing: 1px;
   }
   h2 {
@@ -42,7 +42,6 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
   /* -- Document --*/
   body {
    background: var(--background);
-   background-image: url("../img/pixels.webp");
   }
   nav {
     padding: 2rem;
@@ -85,61 +84,58 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
   a:active, a.active {
     color: var(--accent);
   }
-  video {
-    object-fit: fill;
-  }
-  .left {
-    display: flex;
-    background-color: #130e0e;
-  }
-  .left p {
-    float: left;
-    text-overflow: clip;
-    text-align: center;
-    padding: 200px 0;
-    margin: 10px;
-  }
-  .left img {
-    float: right;
-  }
-  
-  
-  .eboard img {
-    border-radius: 100%;
-    height: 200px;
-    width: 200px;
-  }
-   .eboard img:hover{
-    cursor: pointer;
-    opacity:0.4 !important;
-    filter:alpha(opacity=40) !important; 
-    box-shadow: 0 0 0px #000000 !important;
-    transition: var(--reg);
-  }
-  .eboard {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .eboard figcaption {
-    text-align: center;
-  }
-  .right {
-    display: flex;
-    background-color: #130e0e;
-    margin-bottom: 1.5rem;
-  }
 
-  .right iframe {
-    width: 50%;
-    float: left;
+  .button-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
   }
-  .right p {
-    float: right;
-    text-overflow: clip;
-    text-align: center;
-    padding: 200px 0;
-    margin: 10px;
+  
+  /* Hide default HTML checkbox */
+  .button-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .button-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .button-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .button-slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .button-slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .button-slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
   }
   
 
