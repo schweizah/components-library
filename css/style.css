@@ -55,21 +55,7 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
     margin-left: 1.5rem;
     transition: var(--reg);
   }
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  .logo img {
-    height: 60px;
-  }
-  .logo h1 {
-    padding-top: 1.2rem;
-    padding-left: 1.2rem;
-    font-size: 40px;
-  }
-  .center {
-    line-height: 3.2rem;
-  }
+
 
   a:link {
     color: var(--text);
@@ -92,14 +78,15 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
     height: 34px;
   }
   
-  /* Hide default HTML checkbox */
+
+  
   .button-switch input {
     opacity: 0;
     width: 0;
     height: 0;
   }
   
-  /* The slider */
+
   .button-slider {
     position: absolute;
     cursor: pointer;
